@@ -1,21 +1,34 @@
-import "./App.css";
-
+import "./App.scss";
+import Intro from "./assets/intro.svg";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div className="bg"></div>
+      <h1>Widmy</h1>
+      <h3>
+        Con Widmy siempre tendrás contigo la historia clínica de tu paciente.
+      </h3>
+      <img src={Intro} alt="" />
+      <p>
+        Deja de jugar al gato y el ratón pidiendo la historia clínica de tu
+        paciente.
+        <br />
+        <br />
+        Nos conectamos con los sistemas que ya usas para centralizar la
+        información de tus pacientes de manera segura.
+      </p>
+
+      <div className="formulario">
+        <input
+          type="email"
+          maxlength="256"
+          name="email"
+          data-name="email"
+          placeholder="Ingresa tu email"
+          id="email"
+        />
+        <button>Únete a la lista de espera</button>
+      </div>
     </div>
   );
 }

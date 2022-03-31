@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* CSS HEX */
+  --color-black: #292b2c;
+  --azure: #007bffff;
+  --dodger-blue: #0091f7ff;
+  --carolina-blue: #00a7efff;
+  --cyan-process: #00bde8ff;
+  --dark-turquoise: #00d3e0ff;
+  --turquoise: #00e9d8ff;
+  --sea-green-crayola: #00ffd0ff;
+
+  /* CSS HSL */
+  --azure: hsla(211, 100%, 50%, 1);
+  --dodger-blue: hsla(205, 100%, 48%, 1);
+  --carolina-blue: hsla(198, 100%, 47%, 1);
+  --cyan-process: hsla(191, 100%, 45%, 1);
+  --dark-turquoise: hsla(183, 100%, 44%, 1);
+  --turquoise: hsla(176, 100%, 46%, 1);
+  --sea-green-crayola: hsla(169, 100%, 50%, 1);
+
+  /* SCSS HEX */
+  $azure: #007bffff;
+  $dodger-blue: #0091f7ff;
+  $carolina-blue: #00a7efff;
+  $cyan-process: #00bde8ff;
+  $dark-turquoise: #00d3e0ff;
+  $turquoise: #00e9d8ff;
+  $sea-green-crayola: #00ffd0ff;
+
+  /* SCSS HSL */
+  $azure: hsla(211, 100%, 50%, 1);
+  $dodger-blue: hsla(205, 100%, 48%, 1);
+  $carolina-blue: hsla(198, 100%, 47%, 1);
+  $cyan-process: hsla(191, 100%, 45%, 1);
+  $dark-turquoise: hsla(183, 100%, 44%, 1);
+  $turquoise: hsla(176, 100%, 46%, 1);
+  $sea-green-crayola: hsla(169, 100%, 50%, 1);
+
+  /* SCSS RGB */
+  $azure: rgba(0, 123, 255, 1);
+  $dodger-blue: rgba(0, 145, 247, 1);
+  $carolina-blue: rgba(0, 167, 239, 1);
+  $cyan-process: rgba(0, 189, 232, 1);
+  $dark-turquoise: rgba(0, 211, 224, 1);
+  $turquoise: rgba(0, 233, 216, 1);
+  $sea-green-crayola: rgba(0, 255, 208, 1);
+
+  /* SCSS Gradient */
+  $gradient-top: linear-gradient(
+    0deg,
+    #007bffff,
+    #0091f7ff,
+    #00a7efff,
+    #00bde8ff,
+    #00d3e0ff,
+    #00e9d8ff,
+    #00ffd0ff
+  );
+  $gradient-right: linear-gradient(
+    90deg,
+    #007bffff,
+    #0091f7ff,
+    #00a7efff,
+    #00bde8ff,
+    #00d3e0ff,
+    #00e9d8ff,
+    #00ffd0ff
+  );
+  $gradient-bottom: linear-gradient(
+    180deg,
+    #007bffff,
+    #0091f7ff,
+    #00a7efff,
+    #00bde8ff,
+    #00d3e0ff,
+    #00e9d8ff,
+    #00ffd0ff
+  );
+  $gradient-left: linear-gradient(
+    270deg,
+    #007bffff,
+    #0091f7ff,
+    #00a7efff,
+    #00bde8ff,
+    #00d3e0ff,
+    #00e9d8ff,
+    #00ffd0ff
+  );
+  $gradient-top-right: linear-gradient(
+    45deg,
+    #007bffff,
+    #0091f7ff,
+    #00a7efff,
+    #00bde8ff,
+    #00d3e0ff,
+    #00e9d8ff,
+    #00ffd0ff
+  );
+  $gradient-bottom-right: linear-gradient(
+    135deg,
+    #007bffff,
+    #0091f7ff,
+    #00a7efff,
+    #00bde8ff,
+    #00d3e0ff,
+    #00e9d8ff,
+    #00ffd0ff
+  );
+  $gradient-top-left: linear-gradient(
+    225deg,
+    #007bffff,
+    #0091f7ff,
+    #00a7efff,
+    #00bde8ff,
+    #00d3e0ff,
+    #00e9d8ff,
+    #00ffd0ff
+  );
+  $gradient-bottom-left: linear-gradient(
+    315deg,
+    #007bffff,
+    #0091f7ff,
+    #00a7efff,
+    #00bde8ff,
+    #00d3e0ff,
+    #00e9d8ff,
+    #00ffd0ff
+  );
+  $gradient-radial: radial-gradient(
+    #007bffff,
+    #0091f7ff,
+    #00a7efff,
+    #00bde8ff,
+    #00d3e0ff,
+    #00e9d8ff,
+    #00ffd0ff
+  );
+}
+
+body {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  font-family: "Libre Franklin", sans-serif !important;
+  color: var(--color-black);
+  font-weight: bolder !important;
+  font-size: 3rem;
+}
+
+.underline {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(70%, transparent),
+    color-stop(70%, rgba(0, 123, 255, 0.2))
+  );
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
