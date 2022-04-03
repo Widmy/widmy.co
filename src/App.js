@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./App.scss";
 import Intro from "./assets/intro.svg";
+import { toast } from "react-toastify";
+
 function App() {
   const [email, setEmail] = useState("");
+  const [enviado, setEnviado] = useState(false);
+  const notify = () => {
+    toast.error("Ups, ha ocurrido un error, vuelve a intentarlo más tarde");
+  };
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -17,10 +23,16 @@ function App() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", email }),
     })
-      .then(() => {
-        console.log("enviado");
+      .then((response) => {
+        if (!response.ok) {
+          notify();
+          return;
+        }
+        setEnviado(true);
       })
-      .catch((error) => console.error(error, "error"));
+      .catch((error) => {
+        notify();
+      });
 
     e.preventDefault();
   };
@@ -40,21 +52,27 @@ function App() {
         Nos conectamos con los sistemas que ya usas para centralizar la
         información de tus pacientes de manera segura.
       </p>
+      {enviado && (
+        <p>
+          Has sido añadido a nuestra lista de espera, te contactaremos pronto.
+        </p>
+      )}
+      {!enviado && (
+        <form className="formulario" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            maxLength="256"
+            name="email"
+            data-name="email"
+            placeholder="Ingresa tu email"
+            id="email"
+            value={email}
+            onChange={handleChange}
+          />
 
-      <form className="formulario" onSubmit={handleSubmit}>
-        <input
-          type="email"
-          maxLength="256"
-          name="email"
-          data-name="email"
-          placeholder="Ingresa tu email"
-          id="email"
-          value={email}
-          onChange={handleChange}
-        />
-
-        <button type="submit">Únete a la lista de espera</button>
-      </form>
+          <button type="submit">Únete a la lista de espera</button>
+        </form>
+      )}
     </div>
   );
 }
