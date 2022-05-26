@@ -68,6 +68,7 @@ function App() {
             id="email"
             value={email}
             onChange={handleChange}
+            required
           />
 
           <button type="submit">Únete a la lista de espera</button>
