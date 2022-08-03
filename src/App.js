@@ -1,36 +1,32 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
 import "./App.scss";
 import Intro from "./assets/intro.svg";
-import { toast } from "react-toastify";
 
 function App() {
   const [email, setEmail] = useState("");
   const [enviado, setEnviado] = useState(false);
-  const notify = () => {
-    toast.error("Ups, ha ocurrido un error, vuelve a intentarlo más tarde");
-  };
-  const encode = (data) => {
+  const notify = () => {};
+  const encode = data => {
     return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
   };
-  const handleChange = (e) => setEmail(e.target.value);
-  const handleSubmit = (e) => {
+  const handleChange = e => setEmail(e.target.value);
+  const handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", email }),
+      body: encode({ "form-name": "contact", email })
     })
-      .then((response) => {
+      .then(response => {
         if (!response.ok) {
           notify();
           return;
         }
         setEnviado(true);
       })
-      .catch((error) => {
+      .catch(error => {
         notify();
       });
 

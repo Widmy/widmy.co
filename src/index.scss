@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -141,14 +145,14 @@
 
 body {
   margin: 0;
+}
+h1.widmy {
+  color: var(--azure);
+  font-weight: bolder !important;
+  font-size: 3rem;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-h1 {
-  color: var(--color-black);
-  font-weight: bolder !important;
-  font-size: 3rem;
 }
 
 .underline {
