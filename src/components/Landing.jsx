@@ -261,13 +261,13 @@ export default function Landing() {
                         value={email}
                         onChange={handleChange}
                         required
-                        className="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-rose-500 focus:ring-rose-500"
+                        className="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-rose-900 focus:ring-rose-900"
                       />
                     </div>
                     <div className="mt-4 sm:mt-0 sm:ml-3">
                       <button
                         type="submit"
-                        className="block w-full rounded-md border border-transparent px-5 py-3 bg-rose-500 text-base font-medium text-white shadow hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:px-10"
+                        className="block w-full rounded-md border border-transparent px-5 py-3 bg-rose-800 text-base font-medium text-white shadow hover:bg-rose-900 focus:outline-none focus:ring-2 focus:ring-rose-800 focus:ring-offset-2 sm:px-10"
                       >
                         Únete a la lista de espera
                       </button>
@@ -382,7 +382,7 @@ export default function Landing() {
                     <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
                       <div className="-mt-6">
                         <div>
-                          <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-blue-600 to-blue-500 rounded-md shadow-lg">
+                          <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-rose-900 to-rose-800 rounded-md shadow-lg">
                             <feature.icon
                               className="h-6 w-6 text-white"
                               aria-hidden="true"
@@ -454,8 +454,8 @@ export default function Landing() {
                     src={doctora}
                     alt=""
                   />
-                  <div className="absolute inset-0 bg-rose-500 mix-blend-multiply" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-rose-600 via-rose-600 opacity-90" />
+                  <div className="absolute inset-0 bg-rose-800 mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-rose-900 via-rose-900 opacity-90" />
                   <div className="relative px-8">
                     {/* <div>
                       <img
@@ -467,7 +467,7 @@ export default function Landing() {
                     <blockquote className="mt-8">
                       <div className="relative text-lg font-medium text-white md:flex-grow">
                         <svg
-                          className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-rose-400"
+                          className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-rose-700"
                           fill="currentColor"
                           viewBox="0 0 32 32"
                           aria-hidden="true"
@@ -483,7 +483,7 @@ export default function Landing() {
                       </div>
 
                       <footer className="mt-4">
-                        <p className="text-base font-semibold text-rose-200">
+                        <p className="text-base font-semibold text-rose-500">
                           Angela Nuñez, Estudiante de Medicina
                         </p>
                       </footer>
@@ -617,7 +617,7 @@ export default function Landing() {
               </svg>
             </div>
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-              <div className="relative rounded-2xl px-6 py-10 bg-rose-500 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+              <div className="relative rounded-2xl px-6 py-10 bg-rose-800 overflow-hidden shadow-xl sm:px-12 sm:py-20">
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0"
@@ -630,12 +630,12 @@ export default function Landing() {
                     viewBox="0 0 1463 360"
                   >
                     <path
-                      className="text-rose-400 text-opacity-40"
+                      className="text-rose-600 text-opacity-40"
                       fill="currentColor"
                       d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z"
                     />
                     <path
-                      className="text-rose-600 text-opacity-40"
+                      className="text-rose-900 text-opacity-40"
                       fill="currentColor"
                       d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z"
                     />
@@ -646,7 +646,7 @@ export default function Landing() {
                     <h2 className="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
                       Te avisamos cuando salgamos al público.
                     </h2>
-                    <p className="mt-6 mx-auto max-w-2xl text-lg text-rose-100">
+                    <p className="mt-6 mx-auto max-w-2xl text-lg text-rose-400">
                       Pronto lanzaremos al público, déjanos tu contacto y te
                       avisaremos para que puedas comenzar a usar nuestro
                       producto.
@@ -665,14 +665,14 @@ export default function Landing() {
                         type="email"
                         value={email}
                         onChange={handleChange}
-                        className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-rose-500"
+                        className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-rose-800"
                         placeholder="Ingresa tu email "
                       />
                     </div>
                     <div className="mt-4 sm:mt-0 sm:ml-3">
                       <button
                         type="submit"
-                        className="block w-full rounded-md border border-transparent px-5 py-3 bg-gray-900 text-base font-medium text-white shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-rose-500 sm:px-10"
+                        className="block w-full rounded-md border border-transparent px-5 py-3 bg-gray-900 text-base font-medium text-white shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-rose-800 sm:px-10"
                       >
                         Avísame
                       </button>

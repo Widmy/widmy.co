@@ -147,7 +147,11 @@ body {
   margin: 0;
 }
 h1.widmy {
-  color: var(--azure);
+  color: #fff;
+  background-color: #4334ca;
+  padding: 8px 24px;
+  max-width: 16rem;
+  text-align: center;
   font-weight: bolder !important;
   font-size: 3rem;
   font-family: "Poppins", sans-serif;
