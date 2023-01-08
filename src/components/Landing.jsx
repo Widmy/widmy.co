@@ -12,8 +12,8 @@ import {
 } from "@heroicons/react/outline";
 
 const stats = [
-  { label: "Los doctores ahorran al día", value: "6" },
-  { label: "Doctores usando Widmy todos los días", value: "5" },
+  { label: "Los doctores ahorran al día", value: "+4", valueSpec: " horas" },
+  { label: "Doctores usando Widmy todos los días", value: "30" },
 ];
 
 const features = [
@@ -484,7 +484,7 @@ export default function Landing() {
 
                       <footer className="mt-4">
                         <p className="text-base font-semibold text-rose-500">
-                          Angela Nuñez, Estudiante de Medicina
+                          Dra. Andrea Torres, Dermatóloga
                         </p>
                       </footer>
                     </blockquote>
@@ -528,7 +528,12 @@ export default function Landing() {
                         {stat.label}
                       </dt>
                       <dd className="text-3xl font-extrabold tracking-tight text-gray-900">
-                        {stat.value}
+                        {stat.value}{" "}
+                        {stat.valueSpec && (
+                          <span className="text-base font-medium text-gray-500">
+                            {stat.valueSpec}
+                          </span>
+                        )}
                       </dd>
                     </div>
                   ))}
